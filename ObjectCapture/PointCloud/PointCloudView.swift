@@ -9,13 +9,7 @@ import SwiftUI
 import RealityKit
 
 struct PointCloud: View {
-    var session: ObjectCaptureSession
-    
-    init(session: ObjectCaptureSession) {
-        self.session = session
-    }
-    
     var body: some View {
-        ObjectCapturePointCloudView(session: session)
+        EmptyView()
     }
 }

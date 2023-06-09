@@ -16,6 +16,7 @@
 		76AD04342A32B87200AB14A5 /* ObjectCaptureUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AD04332A32B87200AB14A5 /* ObjectCaptureUITestsLaunchTests.swift */; };
 		76AD04412A32DF5100AB14A5 /* ObjectCaptureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AD04402A32DF5100AB14A5 /* ObjectCaptureViewModel.swift */; };
 		76AD04462A330E8800AB14A5 /* PointCloudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AD04452A330E8800AB14A5 /* PointCloudView.swift */; };
+		76AD044A2A3325BA00AB14A5 /* ObjectCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AD04492A3325BA00AB14A5 /* ObjectCaptureView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		76AD04402A32DF5100AB14A5 /* ObjectCaptureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectCaptureViewModel.swift; sourceTree = "<group>"; };
 		76AD04442A32FDBC00AB14A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		76AD04452A330E8800AB14A5 /* PointCloudView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointCloudView.swift; sourceTree = "<group>"; };
+		76AD04492A3325BA00AB14A5 /* ObjectCaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectCaptureView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				76AD04402A32DF5100AB14A5 /* ObjectCaptureViewModel.swift */,
+				76AD04492A3325BA00AB14A5 /* ObjectCaptureView.swift */,
 			);
 			path = ObjectCapture;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				76AD04462A330E8800AB14A5 /* PointCloudView.swift in Sources */,
+				76AD044A2A3325BA00AB14A5 /* ObjectCaptureView.swift in Sources */,
 				76AD04192A32B87100AB14A5 /* ContentView.swift in Sources */,
 				76AD04172A32B87100AB14A5 /* ObjectCaptureApp.swift in Sources */,
 				76AD04412A32DF5100AB14A5 /* ObjectCaptureViewModel.swift in Sources */,
