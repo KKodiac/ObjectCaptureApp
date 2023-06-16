@@ -43,6 +43,7 @@ extension ObjectCapture {
                     }
                     Button("New Captures") {
                         isAlertPresented = true
+                        session.pause()
                     }
                 }
                 .buttonStyle(.borderedProminent)
@@ -53,7 +54,6 @@ extension ObjectCapture {
                   primaryButton: .default(Text("No Flip"), action: {
                 session.beginNewScanPass()
             }), secondaryButton: .default(Text("Flip"), action: {
-                session.pause()
                 session.beginNewScanPassAfterFlip()
             }))
         }
