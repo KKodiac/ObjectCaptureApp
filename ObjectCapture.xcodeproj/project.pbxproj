@@ -15,8 +15,12 @@
 		76AD04322A32B87200AB14A5 /* ObjectCaptureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AD04312A32B87200AB14A5 /* ObjectCaptureUITests.swift */; };
 		76AD04342A32B87200AB14A5 /* ObjectCaptureUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AD04332A32B87200AB14A5 /* ObjectCaptureUITestsLaunchTests.swift */; };
 		76AD04412A32DF5100AB14A5 /* ObjectCaptureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AD04402A32DF5100AB14A5 /* ObjectCaptureViewModel.swift */; };
-		76AD04462A330E8800AB14A5 /* PointCloudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AD04452A330E8800AB14A5 /* PointCloudView.swift */; };
 		76AD044A2A3325BA00AB14A5 /* ObjectCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AD04492A3325BA00AB14A5 /* ObjectCaptureView.swift */; };
+		76AE00FA2A3BFA1200C8E584 /* ReconstructionProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AE00F92A3BFA1200C8E584 /* ReconstructionProgressView.swift */; };
+		76AE01162A3C076900C8E584 /* ObjectCaptureSubViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AE01152A3C076900C8E584 /* ObjectCaptureSubViews.swift */; };
+		76AE01202A3C354600C8E584 /* CaptureFolderState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AE011F2A3C354600C8E584 /* CaptureFolderState.swift */; };
+		76AE01222A3C3AAF00C8E584 /* CaptureInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AE01212A3C3AAF00C8E584 /* CaptureInfo.swift */; };
+		76AE01262A3C412400C8E584 /* ARQuicklookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AE01252A3C412400C8E584 /* ARQuicklookView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,8 +53,12 @@
 		76AD04332A32B87200AB14A5 /* ObjectCaptureUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectCaptureUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		76AD04402A32DF5100AB14A5 /* ObjectCaptureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectCaptureViewModel.swift; sourceTree = "<group>"; };
 		76AD04442A32FDBC00AB14A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		76AD04452A330E8800AB14A5 /* PointCloudView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointCloudView.swift; sourceTree = "<group>"; };
 		76AD04492A3325BA00AB14A5 /* ObjectCaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectCaptureView.swift; sourceTree = "<group>"; };
+		76AE00F92A3BFA1200C8E584 /* ReconstructionProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReconstructionProgressView.swift; sourceTree = "<group>"; };
+		76AE01152A3C076900C8E584 /* ObjectCaptureSubViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectCaptureSubViews.swift; sourceTree = "<group>"; };
+		76AE011F2A3C354600C8E584 /* CaptureFolderState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureFolderState.swift; sourceTree = "<group>"; };
+		76AE01212A3C3AAF00C8E584 /* CaptureInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureInfo.swift; sourceTree = "<group>"; };
+		76AE01252A3C412400C8E584 /* ARQuicklookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARQuicklookView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +109,8 @@
 		76AD04152A32B87100AB14A5 /* ObjectCapture */ = {
 			isa = PBXGroup;
 			children = (
-				76AD04482A330FC200AB14A5 /* PointCloud */,
-				76AD04472A330FB600AB14A5 /* ObjectCapture */,
+				76AE011E2A3C352B00C8E584 /* Model */,
+				76AD04472A330FB600AB14A5 /* View */,
 				76AD04442A32FDBC00AB14A5 /* Info.plist */,
 				76AD04162A32B87100AB14A5 /* ObjectCaptureApp.swift */,
 				76AD04182A32B87100AB14A5 /* ContentView.swift */,
@@ -137,21 +145,25 @@
 			path = ObjectCaptureUITests;
 			sourceTree = "<group>";
 		};
-		76AD04472A330FB600AB14A5 /* ObjectCapture */ = {
+		76AD04472A330FB600AB14A5 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				76AD04402A32DF5100AB14A5 /* ObjectCaptureViewModel.swift */,
 				76AD04492A3325BA00AB14A5 /* ObjectCaptureView.swift */,
+				76AE00F92A3BFA1200C8E584 /* ReconstructionProgressView.swift */,
+				76AE01152A3C076900C8E584 /* ObjectCaptureSubViews.swift */,
+				76AE01252A3C412400C8E584 /* ARQuicklookView.swift */,
 			);
-			path = ObjectCapture;
+			path = View;
 			sourceTree = "<group>";
 		};
-		76AD04482A330FC200AB14A5 /* PointCloud */ = {
+		76AE011E2A3C352B00C8E584 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				76AD04452A330E8800AB14A5 /* PointCloudView.swift */,
+				76AE011F2A3C354600C8E584 /* CaptureFolderState.swift */,
+				76AE01212A3C3AAF00C8E584 /* CaptureInfo.swift */,
 			);
-			path = PointCloud;
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,8 +296,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76AD04462A330E8800AB14A5 /* PointCloudView.swift in Sources */,
+				76AE01202A3C354600C8E584 /* CaptureFolderState.swift in Sources */,
 				76AD044A2A3325BA00AB14A5 /* ObjectCaptureView.swift in Sources */,
+				76AE01162A3C076900C8E584 /* ObjectCaptureSubViews.swift in Sources */,
+				76AE00FA2A3BFA1200C8E584 /* ReconstructionProgressView.swift in Sources */,
+				76AE01262A3C412400C8E584 /* ARQuicklookView.swift in Sources */,
+				76AE01222A3C3AAF00C8E584 /* CaptureInfo.swift in Sources */,
 				76AD04192A32B87100AB14A5 /* ContentView.swift in Sources */,
 				76AD04172A32B87100AB14A5 /* ObjectCaptureApp.swift in Sources */,
 				76AD04412A32DF5100AB14A5 /* ObjectCaptureViewModel.swift in Sources */,
