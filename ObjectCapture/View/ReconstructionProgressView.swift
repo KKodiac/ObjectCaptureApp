@@ -28,6 +28,8 @@ struct ReconstructionProgressView: View {
                         }
                     }
                     .buttonStyle(.borderedProminent)
+                } else {
+                    ProgressView(value: viewModel.requestProcessPercentage)
                 }
             }
         }

@@ -77,7 +77,7 @@ extension ObjectCapture {
                     for try await output in session.outputs {
                         switch output {
                         case .processingComplete:
-                            viewModel.handleComplete()
+                            viewModel.handleProcessingComplete()
                         case .inputComplete:
                             print("Input Complete!")
                         case .requestError(let request, let error):
@@ -85,7 +85,7 @@ extension ObjectCapture {
                         case .requestComplete(let request, let result):
                             print("Request Complete: \(request) : \(result)")
                         case .requestProgress(_, fractionComplete: let fractionComplete):
-                            print("Request Progress: \(fractionComplete)")
+                            viewModel.handleRequestProgress(fractionComplete)
                         case .processingCancelled:
                             print("Processing Cancelled!")
                         case .invalidSample(id: let id, reason: let reason):

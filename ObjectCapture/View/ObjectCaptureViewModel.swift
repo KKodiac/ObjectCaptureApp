@@ -16,6 +16,7 @@ extension ObjectCapture {
     final class ViewModel: ObservableObject {
         @Published var captureFolderState: CaptureFolderState?
         @Published var isProcessingComplete: Bool = false
+        @Published var requestProcessPercentage: Double = 0.0
         var captureDir: URL? {
             captureFolderState?.captureDir
         }
@@ -36,10 +37,14 @@ extension ObjectCapture {
             case failed(msg: String)
         }
         
-        func handleComplete() {
+        func handleProcessingComplete() {
             withAnimation(.easeIn) {
                 isProcessingComplete = true
             }
+        }
+        
+        func handleRequestProgress(_ fractionComplete: Double) {
+            requestProcessPercentage = fractionComplete
         }
     }
 }
