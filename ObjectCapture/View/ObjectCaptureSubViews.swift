@@ -35,7 +35,6 @@ extension ObjectCapture {
         /// Finish up capture or start new one
         VStack {
             Spacer()
-            
             Text("\(session.numberOfShotsTaken) shots taken")
             if session.userCompletedScanPass {
                 HStack {
@@ -54,6 +53,7 @@ extension ObjectCapture {
                   primaryButton: .default(Text("No Flip"), action: {
                 session.beginNewScanPass()
             }), secondaryButton: .default(Text("Flip"), action: {
+                session.pause()
                 session.beginNewScanPassAfterFlip()
             }))
         }
