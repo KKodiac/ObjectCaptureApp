@@ -14,9 +14,12 @@ private let logger = Logger.init(subsystem: "ObjectCaptureApp", category: "ViewM
 
 extension ObjectCapture {
     final class ViewModel: ObservableObject {
+        typealias ProcessingStage = PhotogrammetrySession.Output.ProcessingStage
         @Published var captureFolderState: CaptureFolderState?
         @Published var isProcessingComplete: Bool = false
         @Published var requestProcessPercentage: Double = 0.0
+        @Published var requestProcessingStage: ProcessingStage? = nil
+
         var captureDir: URL? {
             captureFolderState?.captureDir
         }
@@ -45,6 +48,12 @@ extension ObjectCapture {
         
         func handleRequestProgress(_ fractionComplete: Double) {
             requestProcessPercentage = fractionComplete
+        }
+        
+        func handleRequestProgressInfo(_ processingStage: ProcessingStage?) {
+            guard let stage = processingStage else { return }
+            requestProcessingStage = stage
+            print("Current Processing Stage : \(String(describing: processingStage))")
         }
     }
 }

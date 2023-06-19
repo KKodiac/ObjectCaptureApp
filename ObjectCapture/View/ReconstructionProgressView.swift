@@ -29,7 +29,10 @@ struct ReconstructionProgressView: View {
                     }
                     .buttonStyle(.borderedProminent)
                 } else {
-                    ProgressView(value: viewModel.requestProcessPercentage)
+                    ProgressView(value: viewModel.requestProcessPercentage) {
+                        Text("Processing... \(String(localized: viewModel.requestProcessingStage?.stringDescription ?? ""))")
+                    }
+                    .progressViewStyle(.circular)
                 }
             }
         }

@@ -12,45 +12,78 @@ extension ObjectCapture {
     // MARK: Session State Initialization
     var sessionStateInitView: some View {
         /// Initialize temporary directory for saving captured images
-        Button("Prepare") {
-            viewModel.setup()
-            session.start(imagesDirectory: viewModel.captureDir!)
+        ZStack(alignment: .bottom) {
+            Color.white.ignoresSafeArea()
+            GroupBox {
+                Text("Following materials should be avoided for scanning").font(.headline)
+                Text("Reflective")
+                Text("Transparent")
+                Text("Too Thin")
+                Button("Start") {
+                    viewModel.setup()
+                    session.start(imagesDirectory: viewModel.captureDir!)
+                }
+                .buttonStyle(.borderedProminent)
+                .tint(.purple)
+            }
         }
     }
     
     // MARK: Session State Ready
     var sessionStateReadyView: some View {
         /// ARWorldTrackingConfiguration is called here
-        Button("Continue") { let _ = session.startDetecting() }
+        ZStack(alignment: .bottom) {
+            Color.clear
+            GroupBox {
+                Text("Point the center circle to the object you'd like to capture").font(.headline)
+                Button("Continue") { let _ = session.startDetecting() }
+                    .buttonStyle(.borderedProminent)
+                    .tint(.purple)
+            }
+        }
     }
     
     // MARK: Session State Detecting
     var sessionStateDetectingView: some View {
         /// View allows modifying bounding box
-        Button("Start Capture") { session.startCapturing() }
+        ZStack(alignment: .top) {
+            Color.clear.ignoresSafeArea()
+            GroupBox {
+                Text("You can now begin capture").font(.subheadline)
+                Button("Start Capture") { session.startCapturing() }
+                    .buttonStyle(.borderedProminent)
+                    .tint(.purple)
+            }
+        }
     }
     
     // MARK: Session State Capturing
     var sessionStateCapturingView: some View {
         /// Finish up capture or start new one
-        VStack {
-            Spacer()
-            Text("\(session.numberOfShotsTaken) shots taken")
-            if session.userCompletedScanPass {
-                HStack {
-                    Button("Finish Captures") {
-                        session.finish()
+        ZStack(alignment: .top) {
+            Color.clear.ignoresSafeArea()
+            GroupBox {
+                Text("\(session.numberOfShotsTaken) shots taken")
+                ForEach(session.feedback.sorted{$0.id < $1.id}, id: \.self) { feedback in
+                    Text("\(String(localized: feedback.stringDescription))")
+                }.animation(.easeIn)
+                if session.userCompletedScanPass {
+                    HStack {
+                        Button("Finish Captures") {
+                            session.finish()
+                        }
+                        Button("New Captures") {
+                            isAlertPresented = true
+                            session.pause()
+                        }
                     }
-                    Button("New Captures") {
-                        isAlertPresented = true
-                        session.pause()
-                    }
+                    .buttonStyle(.borderedProminent)
+                    .tint(.purple)
                 }
-                .buttonStyle(.borderedProminent)
             }
         }
         .alert(isPresented: $isAlertPresented) {
-            Alert(title: Text("Finished Flip"),
+            Alert(title: Text("Start a New Scan"),
                   primaryButton: .default(Text("No Flip"), action: {
                 session.beginNewScanPass()
             }), secondaryButton: .default(Text("Flip"), action: {
@@ -68,11 +101,10 @@ extension ObjectCapture {
             .task {
                 do {
                     var configuration = PhotogrammetrySession.Configuration()
-                    let session = try PhotogrammetrySession(
-                        input: viewModel.captureDir!)
+                    let session = try PhotogrammetrySession(input: viewModel.captureDir!)
                     
                     try session.process(requests: [
-                        .modelFile(url: viewModel.captureDir!.appendingPathComponent("model.usdz"))
+                        .modelFile(url: viewModel.captureDir!.appendingPathComponent("model.usdz"), detail: .reduced)
                     ])
                     for try await output in session.outputs {
                         switch output {
@@ -94,8 +126,8 @@ extension ObjectCapture {
                             print("Skipped Sample: \(id)")
                         case .automaticDownsampling:
                             print("AutomaticDownsampling")
-                        case .requestProgressInfo(let request, let progressInfo):
-                            print("Request ProgressInfo: \(request) : \(progressInfo)")
+                        case .requestProgressInfo( _, let progressInfo):
+                            viewModel.handleRequestProgressInfo(progressInfo.processingStage)
                         @unknown default:
                             print("Unknown Error")
                         }
