@@ -1,0 +1,382 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "."
+          }
+        }
+      }
+    },
+    "%@" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        }
+      }
+    },
+    "%lld shots taken" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld 장을 캡쳐 했습니다"
+          }
+        }
+      }
+    },
+    "Aligning Image..." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이미지 끼워 맞추는 중 입니다..."
+          }
+        }
+      }
+    },
+    "Click Here to Check out the Asset." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "여기를 눌러 생성된 모델을 확인하세요."
+          }
+        }
+      }
+    },
+    "Continue" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "계속하기"
+          }
+        }
+      }
+    },
+    "Environment Low Light" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "주위 밝기가 너무 약해요"
+          }
+        }
+      }
+    },
+    "Environment Too Dark" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "주위가 너무 어두워요"
+          }
+        }
+      }
+    },
+    "Finish Captures" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "캡쳐 마치기"
+          }
+        }
+      }
+    },
+    "Flip" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "뒤집기"
+          }
+        }
+      }
+    },
+    "Following materials should be avoided for scanning" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "다음과 같은 물체들은 스캔이 어려울 수 있으니 지양해 주세요."
+          }
+        }
+      }
+    },
+    "Generating Mesh..." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "메쉬 생성 중 입니다..."
+          }
+        }
+      }
+    },
+    "Generating Point Cloud..." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Point Cloud 생성 중 입니다..."
+          }
+        }
+      }
+    },
+    "Mapping Texture..." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "텍스쳐 매핑 중 입니다..."
+          }
+        }
+      }
+    },
+    "Model Processing is Complete!" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "모델 생성이 끝났습니다!"
+          }
+        }
+      }
+    },
+    "Moving Too Fast" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "너무 빨리 움직여요"
+          }
+        }
+      }
+    },
+    "New Captures" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "새로운 캡쳐"
+          }
+        }
+      }
+    },
+    "No Flip" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "뒤집지 않기"
+          }
+        }
+      }
+    },
+    "Object is Out of View" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "물체가 화면에서 사라졌어요"
+          }
+        }
+      }
+    },
+    "Object Not Flippable" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "해당 물체는 뒤집지 못해요"
+          }
+        }
+      }
+    },
+    "Object Too Close" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "물체가 너무 가까워요"
+          }
+        }
+      }
+    },
+    "Object Too Far" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "물체가 너무 멀어요"
+          }
+        }
+      }
+    },
+    "Optimizing..." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "최적화 중 입니다..."
+          }
+        }
+      }
+    },
+    "Overcapturing" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "너무 많이 찍은 것 같아요"
+          }
+        }
+      }
+    },
+    "Point the center circle to the object you'd like to capture" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "캡쳐하고 싶은 물체에 가운데 동그라미를 지향하세요."
+          }
+        }
+      }
+    },
+    "Pre-Processing..." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "전처리 중 입니다..."
+          }
+        }
+      }
+    },
+    "Processing... %@" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "처리중 입니다... %@"
+          }
+        }
+      }
+    },
+    "Reflective" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "반사율이 큰 물체"
+          }
+        }
+      }
+    },
+    "Scanning Failed" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스캔 실패"
+          }
+        }
+      }
+    },
+    "Start" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "시작"
+          }
+        }
+      }
+    },
+    "Start a New Scan" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "새로운 스캔 시작하기"
+          }
+        }
+      }
+    },
+    "Start Capture" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "캡쳐 시작하기"
+          }
+        }
+      }
+    },
+    "Too Thin" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "너무 얇은 물체"
+          }
+        }
+      }
+    },
+    "Transparent" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "투명한 물체"
+          }
+        }
+      }
+    },
+    "Uncomprehensable Feedback" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "피드백 값을 이해 못했어요"
+          }
+        }
+      }
+    },
+    "Uncomprehensable Processing Stage" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "처리 단계 오류"
+          }
+        }
+      }
+    },
+    "You can now begin capture" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "캡쳐를 시작할 수 있습니다"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
