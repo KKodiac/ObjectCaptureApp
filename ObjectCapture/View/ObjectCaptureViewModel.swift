@@ -19,7 +19,7 @@ extension ObjectCapture {
         @Published var isProcessingComplete: Bool = false
         @Published var requestProcessPercentage: Double = 0.0
         @Published var requestProcessingStage: ProcessingStage? = nil
-
+        @Published var output: URL? = nil
         var captureDir: URL? {
             captureFolderState?.captureDir
         }
@@ -44,6 +44,7 @@ extension ObjectCapture {
             withAnimation(.easeIn) {
                 isProcessingComplete = true
             }
+            output = captureDir!.appendingPathComponent("model", conformingTo: .usdz)
         }
         
         func handleRequestProgress(_ fractionComplete: Double) {

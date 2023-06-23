@@ -36,9 +36,7 @@ struct ReconstructionProgressView: View {
                 }
             }
         }
-        .sheet(isPresented: $isPresentingProcessedAsset) {
-            ARQuickLookView(name: "model", allowScaling: true, captureDir: viewModel.captureDir!)
-        }
+        .quickLookPreview($viewModel.output)
     }
 }
 

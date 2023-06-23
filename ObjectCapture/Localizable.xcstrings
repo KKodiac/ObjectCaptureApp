@@ -272,7 +272,7 @@
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "처리중 입니다... %@"
+            "value" : "처리 중 입니다... %@"
           }
         }
       }
